@@ -1,14 +1,14 @@
 package ch9;
 
-final class Card {
+final class Card3 {
     String kind;
     int num;
 
-    Card() {
+    Card3() {
         this("SPADE", 1);
     }
 
-    Card(String kind, int num) {
+    Card3(String kind, int num) {
         this.kind = kind;
         this.num = num;
     }
@@ -23,8 +23,8 @@ public class ClassEx1 {
 
     public static void main(String[] args) throws Exception {
 
-        Card c  = new Card("HEART", 3); // new 연산자로 객체 생성
-        Card c2 = Card.class.newInstance();          // Class 객체를 통해서 객체 생성
+        Card3 c  = new Card3("HEART", 3); // new 연산자로 객체 생성
+        Card3 c2 = Card3.class.newInstance();          // Class 객체를 통해서 객체 생성
 
         Class cObject = c.getClass();
 

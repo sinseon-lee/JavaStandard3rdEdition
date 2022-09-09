@@ -1,9 +1,9 @@
 package ch9;
 
-class Point {
+class Point2 {
     int x, y;
 
-    Point(int x, int y) {
+    Point2(int x, int y) {
         this.x = x;
         this.y = y;
     }
@@ -14,10 +14,10 @@ class Point {
 }
 
 class Circle implements Cloneable {
-    Point p;
+    Point2 p;
     double r;
 
-    Circle(Point p, double r) {
+    Circle(Point2 p, double r) {
         this.p = p;
         this.r = r;
     }
@@ -40,7 +40,7 @@ class Circle implements Cloneable {
         } catch (CloneNotSupportedException e) {}
 
         Circle c = (Circle)object;
-        c.p = new Point(this.p.x, this.p.y);
+        c.p = new Point2(this.p.x, this.p.y);
 
         return c;
     }
@@ -52,7 +52,7 @@ class Circle implements Cloneable {
 
 public class ShallowDeepCopy {
     public static void main(String[] args) {
-        Circle c1 = new Circle(new Point(1, 1), 2.0);
+        Circle c1 = new Circle(new Point2(1, 1), 2.0);
         Circle c2 = c1.shallowCopy();
         Circle c3 = c1.deepCopy();
 

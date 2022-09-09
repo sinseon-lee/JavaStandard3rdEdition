@@ -15,13 +15,13 @@ class Point implements Cloneable {
         return "x=" + x + ", y=" + y;
     }
 
-    public Point clone() {
+    public Point2 clone() {
         Object obj = null;
         try {
             obj = super.clone(); // clone은 반드시 예외처리를 해줘야 한다.
         } catch (CloneNotSupportedException e) { }
 
-        return (Point) obj;
+        return (Point2) obj;
     }
 
 }
@@ -29,9 +29,11 @@ class Point implements Cloneable {
 public class CloneEx1 {
 
     public static void main(String[] args) {
-        Point original = new Point(3, 5);
-        Point copy = (Point) original.clone();
+        /*
+        Point2 original = new Point2(3, 5);
+        Point2 copy = (Point2) original.clone();
         System.out.println(original);
         System.out.println(copy);
+         */
     }
 }
